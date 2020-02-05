@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myvideo1</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+<script>
+    function MovePage() {
+        window.location.href = "survey1.html";
+    }
+</script>
+
+<body>
+    <header>
+        <div id="nameofweb">
+            <h1>Please watch the video</h1>
+        </div>
+    </header>
+    <div class="window">
+        <video width="500" height="350" controls onended="MovePage()">
+            <source src="live cat.mov" type="video/mp4">
+            <source src="live cat.ogg" type="video/ogg">
+        </video>
+    </div>
+</body>
+
+</html>
