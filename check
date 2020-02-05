@@ -1,0 +1,34 @@
+ <?php
+    if( isset($_POST['clicks']) )
+    { 
+        clickInc();
+    }
+    function clickInc()
+    {
+        $count = ("clickcount.txt");
+
+        $clicks = file($count);
+        $clicks[0]++;
+
+        $fp = fopen($count, "w") or die("Can't open file");
+        fputs($fp, "$clicks[0]");
+        fclose($fp);
+
+        echo $clicks[0];
+    }
+    ?>
+
+    <html>
+
+        <head>
+
+           <title>button count</title>
+
+        </head>
+        <body>
+            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+                <input type="submit" value="click me!" name="clicks">
+            </form>
+
+        </body>
+    </html>
