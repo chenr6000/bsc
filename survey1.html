@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>survey1</title>
+  <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+
+<script>
+  function clickCounter1() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.alive1) {
+        localStorage.alive1 = Number(localStorage.alive1) + 1;
+      } else {
+        localStorage.alive1 = 1;
+      }
+    }
+  }
+  function clickCounter2() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.dead1) {
+        localStorage.dead1 = Number(localStorage.dead1) + 1;
+      } else {
+        localStorage.dead1 = 1;
+      }
+    }
+  }
+</script>
+
+<body>
+  <h1>please answer this survey!</h1>
+  <h3>please choose a picture</h3>
+  <div class="row">
+    <div class="column">
+      <a href="thankyou1.html">
+        <p><img src="alivecat.jpeg" style="width:100%" onclick="clickCounter1()"></button></p></button>
+      </a>
+    </div>
+    <div class="column">
+      <a href="thankyou1.html">
+        <p><img src="deadcat.jpeg" style="width:100%" onclick="clickCounter2()"></button></p></button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
