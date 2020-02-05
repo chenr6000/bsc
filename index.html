@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>landingpage</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+<script>
+    function myFunction() {
+        var random = Math.floor(Math.random() * 3) + 1;
+        document.getElementById("randomNumber").innerHTML = random;
+        window.location = "myvideo" + random + ".html";
+    }
+
+</script>
+
+<body onload="myFunction()">
+    <div id="randomNumber"></div>
+</body>
+
+</html>
